@@ -4,14 +4,16 @@
 #include <gmock/gmock.h>
 #include <cstdint>
 #include "TimedDoor.h"
+#include <chrono> // NOLINT [build/c++11]
+#include <thread> // NOLINT [build/c++11]
 
 class MockTimerClient : public TimerClient {
-public:
+ public:
   MOCK_METHOD(void, Timeout, ());
 };
 
 class TimedDoorTest : public ::testing::Test {
-protected:
+ protected:
   void SetUp() override {
     door = new TimedDoor(100);
   }

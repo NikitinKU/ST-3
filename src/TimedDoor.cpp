@@ -3,6 +3,8 @@
 #include "TimedDoor.h"
 #include <iostream>
 #include <stdexcept>
+#include <thread> // NOLINT [build/c++11]
+#include <chrono> // NOLINT [build/c++11]
 
 DoorTimerAdapter::DoorTimerAdapter(TimedDoor& door) : door(door) {}
 
