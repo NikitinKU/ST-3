@@ -66,7 +66,7 @@ TEST_F(TimedDoorTest, unlock_door_then_timeout_exception_test) {
   EXPECT_THROW(door.throwState(), std::runtime_error);
 }
 
-TEST_F(TimerTest, try_to_close_door_second_time) {
+TEST_F(TimedDoorTest, try_to_close_door_second_time) {
   EXPECT_THROW(door.lock(), std::logic_error);
 }
 
