@@ -49,5 +49,5 @@ void Timer::sleep(int time_) {
 void Timer::tregister(int timeout, TimerClient* client) {
   client->Timeout();
   sleep(timeout);
-  client_->Timeout();
+  client->Timeout();
 }
